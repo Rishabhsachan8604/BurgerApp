@@ -157,11 +157,14 @@ class ShopView extends ShopViewModel {
   Padding buildPaddingHeaderCard(int index) {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 5),
-      child: RaisedButton(
-        color: tabBarNotifier.index == index ? Colors.red : Colors.white,
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          backgroundColor: tabBarNotifier.index == index ? Colors.red : Colors.white,
+          foregroundColor: tabBarNotifier.index == index ? Colors.white : Colors.black,
+          shape: StadiumBorder(),
+        ),
         onPressed: () => headerListChangePosition(index),
-        child: Text("${shopList[index].categoryName} ", style: TextStyle(color: tabBarNotifier.index == index ? Colors.white : Colors.black,),),
-        shape: StadiumBorder(),
+        child: Text("${shopList[index].categoryName} "),
       ),
     );
   }

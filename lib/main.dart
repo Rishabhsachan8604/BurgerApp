@@ -37,7 +37,6 @@ class _AppState extends State<App> {
 
           primaryColor: ConstantColor.materialPrimaryColor,
           primarySwatch: ConstantColor.materialPrimaryColor,
-          accentColor: ConstantColor.materialPrimaryColor,
         ),
         debugShowCheckedModeBanner: false,
         home: SplashScreen(),

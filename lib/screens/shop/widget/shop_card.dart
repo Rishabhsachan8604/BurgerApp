@@ -362,7 +362,7 @@ class _DynamicallyCheckboxState extends State<DynamicallyCheckbox> {
           SizedBox(height: 10),
           Divider(),
           SizedBox(height: 10),
-          RaisedButton(
+          ElevatedButton(
             onPressed: (){ },
             child: Text("Add to Cart"),
           ),
@@ -555,7 +555,7 @@ class _ExpansionPanelDemoState extends State<ExpansionPanelDemo> {
           onPressed: (){ },
             child: Text("Add to Cart", style:TextStyle(color: Colors.white)),
             style: ElevatedButton.styleFrom(
-              primary: Colors.red, // This is what you need!
+              backgroundColor: Colors.red,
             ),
                ),
 

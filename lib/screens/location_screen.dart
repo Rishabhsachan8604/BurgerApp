@@ -18,8 +18,7 @@ class _LocationScreenState extends State<LocationScreen> {
 
   getCurrentLocation() {
     Geolocator.getCurrentPosition(
-        desiredAccuracy: LocationAccuracy.best,
-        forceAndroidLocationManager: true)
+        desiredAccuracy: LocationAccuracy.best)
         .then((Position position) {
       setState(() {
         currentPosition = position;
@@ -104,13 +103,13 @@ class _LocationScreenState extends State<LocationScreen> {
                                     children: <Widget>[
                                       Text(
                                         'Location',
-                                        style: Theme.of(context).textTheme.caption,
+                                        style: Theme.of(context).textTheme.bodySmall,
                                       ),
                                       if (currentPosition != null &&
                                           currentLocationAddress != null)
                                         Text(currentLocationAddress,
                                             style:
-                                            Theme.of(context).textTheme.bodyText2),
+                                            Theme.of(context).textTheme.bodyMedium),
                                     ],
                                   ),
                                 ),
@@ -176,7 +175,7 @@ class _LocationScreenState extends State<LocationScreen> {
                              // getCurrentLocation();
                             },
                             style: ElevatedButton.styleFrom(
-                                onPrimary: ConstantColor.primaryColor,
+                                foregroundColor: ConstantColor.primaryColor,
                                 shadowColor: ConstantColor.primaryColor,
                                 elevation: 18,
                                 padding: EdgeInsets.zero,

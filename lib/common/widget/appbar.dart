@@ -1,6 +1,7 @@
 import 'package:burger_app/screens/cart_screen.dart';
 import 'package:burger_app/screens/location_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
 import '../util/color_utils.dart';
@@ -8,14 +9,14 @@ import '../util/color_utils.dart';
 class MyAppbar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
   final double height;
-  const MyAppbar({Key? key, required this.title, this.height: 60.0})
+  const MyAppbar({Key? key, required this.title, this.height = 60.0})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
       child: AppBar(
-        brightness: Brightness.light,
+        systemOverlayStyle: SystemUiOverlayStyle.dark,
         elevation: 0,
 
         centerTitle: true,
@@ -101,14 +102,14 @@ class MyAppbar extends StatelessWidget implements PreferredSizeWidget {
 class MyStackAppbar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
   final double height;
-  const MyStackAppbar({Key? key, required this.title, this.height: 60.0})
+  const MyStackAppbar({Key? key, required this.title, this.height = 60.0})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
       child: AppBar(
-        brightness: Brightness.dark,
+        systemOverlayStyle: SystemUiOverlayStyle.light,
         elevation: 0,
         backgroundColor: ConstantColor.white,
         leading: IconButton(

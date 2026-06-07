@@ -133,7 +133,7 @@ class Body extends StatelessWidget {
                                     new MainPage()));
                           },
                           style: ElevatedButton.styleFrom(
-                              onPrimary: ConstantColor.primaryColor,
+                              foregroundColor: ConstantColor.primaryColor,
                               shadowColor: ConstantColor.primaryColor,
                               elevation: 18,
                               padding: EdgeInsets.zero,

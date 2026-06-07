@@ -1,20 +1,16 @@
-import 'package:connectivity/connectivity.dart';
+import 'package:connectivity_plus/connectivity_plus.dart';
 
 class InternetCheck {
   Future<bool> check() async {
-    final ConnectivityResult connectivityResult =
+    final List<ConnectivityResult> results =
         await Connectivity().checkConnectivity();
-    if (connectivityResult == ConnectivityResult.mobile) {
-      return true;
-    } else if (connectivityResult == ConnectivityResult.wifi) {
-      return true;
-    }
-    return false;
+    return results.contains(ConnectivityResult.mobile) ||
+        results.contains(ConnectivityResult.wifi);
   }
 
   dynamic checkInternet(Function func) {
-    check().then((intenet) {
-      if (intenet != null && intenet) {
+    check().then((internet) {
+      if (internet) {
         func(true);
       } else {
         func(false);

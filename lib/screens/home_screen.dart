@@ -30,7 +30,7 @@ class _HomeScreenState extends State<HomeScreen> {
         height: 50.0,
 
       ),
-      drawer: NavigationDrawer(),
+      drawer: AppNavigationDrawer(),
       body: Container(
         padding: EdgeInsets.symmetric(horizontal: 5.0),
         child: Column(
